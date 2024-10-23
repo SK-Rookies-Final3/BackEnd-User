@@ -28,7 +28,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
     private List<String> SWAGGER = List.of(
             "/swagger-ui.html",
             "/swagger-ui/**",
-            "/v3/api-docs/**"
+            "/v1/api-docs/**"
     );
 
     @Override
