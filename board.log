@@ -1,0 +1,241 @@
+2024-10-24 02:03:27,786  INFO {com.shoppingoo.ShoppingooApplication} Starting ShoppingooApplication using Java 21.0.5 with PID 24140 (C:\Users\t0105\Downloads\shoppingoo\build\classes\java\main started by t0105 in C:\Users\t0105\Downloads\shoppingoo)
+2024-10-24 02:03:27,790 DEBUG {com.shoppingoo.ShoppingooApplication} Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-24 02:03:27,791  INFO {com.shoppingoo.ShoppingooApplication} The following 1 profile is active: "prod"
+2024-10-24 02:03:27,874  INFO {org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor} Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-24 02:03:27,874  INFO {org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor} For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-24 02:03:29,796  INFO {org.springframework.data.repository.config.RepositoryConfigurationDelegate} Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-24 02:03:30,217  INFO {org.springframework.data.repository.config.RepositoryConfigurationDelegate} Finished Spring Data repository scanning in 404 ms. Found 1 JPA repository interface.
+2024-10-24 02:03:32,651  INFO {org.springframework.boot.web.embedded.tomcat.TomcatWebServer} Tomcat initialized with port 8080 (http)
+2024-10-24 02:03:32,893  INFO {org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext} Root WebApplicationContext: initialization completed in 5010 ms
+2024-10-24 02:03:39,829  INFO {com.shoppingoo.ShoppingooApplication} Starting ShoppingooApplication using Java 21.0.5 with PID 9096 (C:\Users\t0105\Downloads\shoppingoo\build\classes\java\main started by t0105 in C:\Users\t0105\Downloads\shoppingoo)
+2024-10-24 02:03:39,834 DEBUG {com.shoppingoo.ShoppingooApplication} Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-24 02:03:39,835  INFO {com.shoppingoo.ShoppingooApplication} The following 1 profile is active: "prod"
+2024-10-24 02:03:39,929  INFO {org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor} Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-24 02:03:39,929  INFO {org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor} For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-24 02:03:42,012  INFO {org.springframework.data.repository.config.RepositoryConfigurationDelegate} Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-24 02:03:42,393  INFO {org.springframework.data.repository.config.RepositoryConfigurationDelegate} Finished Spring Data repository scanning in 359 ms. Found 1 JPA repository interface.
+2024-10-24 02:03:44,414  INFO {org.springframework.boot.web.embedded.tomcat.TomcatWebServer} Tomcat initialized with port 8080 (http)
+2024-10-24 02:03:44,703  INFO {org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext} Root WebApplicationContext: initialization completed in 4771 ms
+2024-10-24 02:03:46,229  INFO {org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo} No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-24 02:03:46,812 ERROR {org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean} Failed to initialize JPA EntityManagerFactory: You cannot override the [id] non-identifier property from the [com.shoppingoo.common.entity.BaseEntity] base class or @MappedSuperclass and make it an identifier in the [com.shoppingoo.db.user.User] subclass
+2024-10-24 02:03:46,813  WARN {org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext} Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: You cannot override the [id] non-identifier property from the [com.shoppingoo.common.entity.BaseEntity] base class or @MappedSuperclass and make it an identifier in the [com.shoppingoo.db.user.User] subclass
+2024-10-24 02:03:46,861  INFO {org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger} 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-10-24 02:03:46,917 ERROR {org.springframework.boot.SpringApplication} Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: You cannot override the [id] non-identifier property from the [com.shoppingoo.common.entity.BaseEntity] base class or @MappedSuperclass and make it an identifier in the [com.shoppingoo.db.user.User] subclass
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.shoppingoo.ShoppingooApplication.main(ShoppingooApplication.java:9)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.hibernate.MappingException: You cannot override the [id] non-identifier property from the [com.shoppingoo.common.entity.BaseEntity] base class or @MappedSuperclass and make it an identifier in the [com.shoppingoo.db.user.User] subclass
+	at org.hibernate.boot.model.internal.PropertyBinder.checkIdProperty(PropertyBinder.java:614)
+	at org.hibernate.boot.model.internal.PropertyBinder.addProperty(PropertyBinder.java:572)
+	at org.hibernate.boot.model.internal.PropertyBinder.addElementsOfClass(PropertyBinder.java:558)
+	at org.hibernate.boot.model.internal.InheritanceState.getElementsToProcess(InheritanceState.java:226)
+	at org.hibernate.boot.model.internal.InheritanceState.postProcess(InheritanceState.java:160)
+	at org.hibernate.boot.model.internal.EntityBinder.handleIdentifier(EntityBinder.java:407)
+	at org.hibernate.boot.model.internal.EntityBinder.bindEntityClass(EntityBinder.java:248)
+	at org.hibernate.boot.model.internal.AnnotationBinder.bindClass(AnnotationBinder.java:399)
+	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.processEntityHierarchies(AnnotationMetadataSourceProcessorImpl.java:259)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.processEntityHierarchies(MetadataBuildingProcess.java:281)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:324)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802)
+	... 18 common frames omitted
+2024-10-24 02:04:44,933  INFO {com.shoppingoo.ShoppingooApplication} Starting ShoppingooApplication using Java 21.0.5 with PID 20420 (C:\Users\t0105\Downloads\shoppingoo\build\classes\java\main started by t0105 in C:\Users\t0105\Downloads\shoppingoo)
+2024-10-24 02:04:44,937 DEBUG {com.shoppingoo.ShoppingooApplication} Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-24 02:04:44,938  INFO {com.shoppingoo.ShoppingooApplication} The following 1 profile is active: "prod"
+2024-10-24 02:04:45,022  INFO {org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor} Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-24 02:04:45,022  INFO {org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor} For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-24 02:04:46,829  INFO {org.springframework.data.repository.config.RepositoryConfigurationDelegate} Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-24 02:04:47,309  INFO {org.springframework.data.repository.config.RepositoryConfigurationDelegate} Finished Spring Data repository scanning in 466 ms. Found 1 JPA repository interface.
+2024-10-24 02:04:48,926  INFO {org.springframework.boot.web.embedded.tomcat.TomcatWebServer} Tomcat initialized with port 8080 (http)
+2024-10-24 02:04:49,078  INFO {org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext} Root WebApplicationContext: initialization completed in 4054 ms
+2024-10-24 02:04:50,384  INFO {org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo} No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-24 02:04:50,948 ERROR {org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean} Failed to initialize JPA EntityManagerFactory: You cannot override the [id] non-identifier property from the [com.shoppingoo.common.entity.BaseEntity] base class or @MappedSuperclass and make it an identifier in the [com.shoppingoo.db.user.User] subclass
+2024-10-24 02:04:50,948  WARN {org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext} Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: You cannot override the [id] non-identifier property from the [com.shoppingoo.common.entity.BaseEntity] base class or @MappedSuperclass and make it an identifier in the [com.shoppingoo.db.user.User] subclass
+2024-10-24 02:04:51,009  INFO {org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger} 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-10-24 02:04:51,054 ERROR {org.springframework.boot.SpringApplication} Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: You cannot override the [id] non-identifier property from the [com.shoppingoo.common.entity.BaseEntity] base class or @MappedSuperclass and make it an identifier in the [com.shoppingoo.db.user.User] subclass
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.shoppingoo.ShoppingooApplication.main(ShoppingooApplication.java:9)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.hibernate.MappingException: You cannot override the [id] non-identifier property from the [com.shoppingoo.common.entity.BaseEntity] base class or @MappedSuperclass and make it an identifier in the [com.shoppingoo.db.user.User] subclass
+	at org.hibernate.boot.model.internal.PropertyBinder.checkIdProperty(PropertyBinder.java:614)
+	at org.hibernate.boot.model.internal.PropertyBinder.addProperty(PropertyBinder.java:572)
+	at org.hibernate.boot.model.internal.PropertyBinder.addElementsOfClass(PropertyBinder.java:558)
+	at org.hibernate.boot.model.internal.InheritanceState.getElementsToProcess(InheritanceState.java:226)
+	at org.hibernate.boot.model.internal.InheritanceState.postProcess(InheritanceState.java:160)
+	at org.hibernate.boot.model.internal.EntityBinder.handleIdentifier(EntityBinder.java:407)
+	at org.hibernate.boot.model.internal.EntityBinder.bindEntityClass(EntityBinder.java:248)
+	at org.hibernate.boot.model.internal.AnnotationBinder.bindClass(AnnotationBinder.java:399)
+	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.processEntityHierarchies(AnnotationMetadataSourceProcessorImpl.java:259)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.processEntityHierarchies(MetadataBuildingProcess.java:281)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:324)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802)
+	... 18 common frames omitted
+2024-10-24 02:27:47,847  INFO {com.shoppingoo.ShoppingooApplication} Starting ShoppingooApplication using Java 21.0.5 with PID 25092 (C:\Users\t0105\Downloads\shoppingoo\build\classes\java\main started by t0105 in C:\Users\t0105\Downloads\shoppingoo)
+2024-10-24 02:27:47,852 DEBUG {com.shoppingoo.ShoppingooApplication} Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-24 02:27:47,853  INFO {com.shoppingoo.ShoppingooApplication} The following 1 profile is active: "prod"
+2024-10-24 02:27:47,947  INFO {org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor} Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-24 02:27:47,947  INFO {org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor} For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-24 02:27:50,016  INFO {org.springframework.data.repository.config.RepositoryConfigurationDelegate} Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-24 02:27:50,510  INFO {org.springframework.data.repository.config.RepositoryConfigurationDelegate} Finished Spring Data repository scanning in 476 ms. Found 1 JPA repository interface.
+2024-10-24 02:27:52,739  INFO {org.springframework.boot.web.embedded.tomcat.TomcatWebServer} Tomcat initialized with port 8080 (http)
+2024-10-24 02:27:52,895  INFO {org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext} Root WebApplicationContext: initialization completed in 4945 ms
+2024-10-24 02:27:54,577  INFO {org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo} No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-24 02:27:55,271 ERROR {org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean} Failed to initialize JPA EntityManagerFactory: You cannot override the [id] non-identifier property from the [com.shoppingoo.common.entity.BaseEntity] base class or @MappedSuperclass and make it an identifier in the [com.shoppingoo.db.user.User] subclass
+2024-10-24 02:27:55,272  WARN {org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext} Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: You cannot override the [id] non-identifier property from the [com.shoppingoo.common.entity.BaseEntity] base class or @MappedSuperclass and make it an identifier in the [com.shoppingoo.db.user.User] subclass
+2024-10-24 02:27:55,357  INFO {org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger} 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-10-24 02:27:55,418 ERROR {org.springframework.boot.SpringApplication} Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: You cannot override the [id] non-identifier property from the [com.shoppingoo.common.entity.BaseEntity] base class or @MappedSuperclass and make it an identifier in the [com.shoppingoo.db.user.User] subclass
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.shoppingoo.ShoppingooApplication.main(ShoppingooApplication.java:9)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.hibernate.MappingException: You cannot override the [id] non-identifier property from the [com.shoppingoo.common.entity.BaseEntity] base class or @MappedSuperclass and make it an identifier in the [com.shoppingoo.db.user.User] subclass
+	at org.hibernate.boot.model.internal.PropertyBinder.checkIdProperty(PropertyBinder.java:614)
+	at org.hibernate.boot.model.internal.PropertyBinder.addProperty(PropertyBinder.java:572)
+	at org.hibernate.boot.model.internal.PropertyBinder.addElementsOfClass(PropertyBinder.java:558)
+	at org.hibernate.boot.model.internal.InheritanceState.getElementsToProcess(InheritanceState.java:226)
+	at org.hibernate.boot.model.internal.InheritanceState.postProcess(InheritanceState.java:160)
+	at org.hibernate.boot.model.internal.EntityBinder.handleIdentifier(EntityBinder.java:407)
+	at org.hibernate.boot.model.internal.EntityBinder.bindEntityClass(EntityBinder.java:248)
+	at org.hibernate.boot.model.internal.AnnotationBinder.bindClass(AnnotationBinder.java:399)
+	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.processEntityHierarchies(AnnotationMetadataSourceProcessorImpl.java:259)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.processEntityHierarchies(MetadataBuildingProcess.java:281)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:324)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802)
+	... 18 common frames omitted
+2024-10-24 02:34:10,301  INFO {com.shoppingoo.ShoppingooApplication} Starting ShoppingooApplication using Java 21.0.5 with PID 13976 (C:\Users\t0105\Downloads\shoppingoo\build\classes\java\main started by t0105 in C:\Users\t0105\Downloads\shoppingoo)
+2024-10-24 02:34:10,301 DEBUG {com.shoppingoo.ShoppingooApplication} Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-24 02:34:10,301  INFO {com.shoppingoo.ShoppingooApplication} The following 1 profile is active: "prod"
+2024-10-24 02:34:10,396  INFO {org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor} Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-24 02:34:10,396  INFO {org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor} For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-24 02:34:12,219  INFO {org.springframework.data.repository.config.RepositoryConfigurationDelegate} Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-24 02:34:12,729  INFO {org.springframework.data.repository.config.RepositoryConfigurationDelegate} Finished Spring Data repository scanning in 495 ms. Found 1 JPA repository interface.
+2024-10-24 02:34:14,500  INFO {org.springframework.boot.web.embedded.tomcat.TomcatWebServer} Tomcat initialized with port 8080 (http)
+2024-10-24 02:34:14,666  INFO {org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext} Root WebApplicationContext: initialization completed in 4270 ms
+2024-10-24 02:34:15,958  INFO {org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo} No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-24 02:34:16,533 ERROR {org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean} Failed to initialize JPA EntityManagerFactory: You cannot override the [id] non-identifier property from the [com.shoppingoo.common.entity.BaseEntity] base class or @MappedSuperclass and make it an identifier in the [com.shoppingoo.db.user.User] subclass
+2024-10-24 02:34:16,533  WARN {org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext} Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: You cannot override the [id] non-identifier property from the [com.shoppingoo.common.entity.BaseEntity] base class or @MappedSuperclass and make it an identifier in the [com.shoppingoo.db.user.User] subclass
+2024-10-24 02:34:16,577  INFO {org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger} 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-10-24 02:34:16,622 ERROR {org.springframework.boot.SpringApplication} Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: You cannot override the [id] non-identifier property from the [com.shoppingoo.common.entity.BaseEntity] base class or @MappedSuperclass and make it an identifier in the [com.shoppingoo.db.user.User] subclass
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.shoppingoo.ShoppingooApplication.main(ShoppingooApplication.java:9)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.hibernate.MappingException: You cannot override the [id] non-identifier property from the [com.shoppingoo.common.entity.BaseEntity] base class or @MappedSuperclass and make it an identifier in the [com.shoppingoo.db.user.User] subclass
+	at org.hibernate.boot.model.internal.PropertyBinder.checkIdProperty(PropertyBinder.java:614)
+	at org.hibernate.boot.model.internal.PropertyBinder.addProperty(PropertyBinder.java:572)
+	at org.hibernate.boot.model.internal.PropertyBinder.addElementsOfClass(PropertyBinder.java:558)
+	at org.hibernate.boot.model.internal.InheritanceState.getElementsToProcess(InheritanceState.java:226)
+	at org.hibernate.boot.model.internal.InheritanceState.postProcess(InheritanceState.java:160)
+	at org.hibernate.boot.model.internal.EntityBinder.handleIdentifier(EntityBinder.java:407)
+	at org.hibernate.boot.model.internal.EntityBinder.bindEntityClass(EntityBinder.java:248)
+	at org.hibernate.boot.model.internal.AnnotationBinder.bindClass(AnnotationBinder.java:399)
+	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.processEntityHierarchies(AnnotationMetadataSourceProcessorImpl.java:259)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.processEntityHierarchies(MetadataBuildingProcess.java:281)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:324)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802)
+	... 18 common frames omitted

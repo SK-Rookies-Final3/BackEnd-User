@@ -1,0 +1,45 @@
+spring:
+  profiles:
+    active: prod
+  application:
+    name: careerconnect
+
+  # Database 설정
+  datasource:
+    driver-class-name: com.mariadb.cj.jdbc.Driver
+    url: ${DATABASE_URL}
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
+
+  jpa:
+    show-sql: true
+    open-in-view: false
+    properties:
+      format_sql: true
+      hibernate:
+      dialect:
+      ddl-auto: update
+
+  flyway:
+    url: ${DATABASE_URL}
+    user: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
+    locations: classpath:/db/migration/mariadb
+    baselineOnMigrate: true
+    enabled: true
+
+#log 설정
+logging:
+  config: classpath:shoppingoo.xml
+#  level:
+#    root: DEBUG
+#  pattern:
+#     console: "%d %5p {%c} %m%n"
+
+token:
+  secret:
+    key: SpringBootJWTHelperTokenSecretKeyValue123!@#
+  access-token:
+    plus-hour: 1
+  refresh-token:
+    plus-hour: 12

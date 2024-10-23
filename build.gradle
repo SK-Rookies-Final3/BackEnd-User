@@ -24,17 +24,32 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	// Spring Boot 의존성
+	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa' // JPA 스타터
+	implementation 'org.springframework.boot:spring-boot-starter-web' // 웹 스타터
+	implementation 'org.springframework.boot:spring-boot-starter-validation' // 검증 스타터
 	implementation 'org.springframework.boot:spring-boot-starter-security'
-	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'
-	compileOnly 'org.projectlombok:lombok'
-	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+	implementation 'io.jsonwebtoken:jjwt-api:0.11.5'
+	implementation 'io.jsonwebtoken:jjwt-impl:0.11.5'
+	implementation 'io.jsonwebtoken:jjwt-jackson:0.11.5' // Jackson 사용시
+	runtimeOnly "io.jsonwebtoken:jjwt-impl:0.12.6"
+	runtimeOnly "io.jsonwebtoken:jjwt-jackson:0.12.6"
+
+	// Lombok 관련 의존성
+	compileOnly 'org.projectlombok:lombok' // Lombok (컴파일 전용)
+	annotationProcessor 'org.projectlombok:lombok' // Lombok 애너테이션 프로세서
+
+	// 개발 도구
+	developmentOnly 'org.springframework.boot:spring-boot-devtools' // Spring Boot DevTools (개발 전용)
+
 	runtimeOnly 'com.mysql:mysql-connector-j'
-	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
-	annotationProcessor 'org.projectlombok:lombok'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	// 데이터베이스 관련 의존성
+	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client' // MariaDB 클라이언트
+
+	// 테스트 관련 의존성
+	testImplementation 'org.springframework.boot:spring-boot-starter-test' // Spring Boot 테스트 스타터
 	testImplementation 'org.springframework.security:spring-security-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
