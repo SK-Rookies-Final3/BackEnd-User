@@ -1,5 +1,6 @@
 package com.shoppingoo.domain.user.dto;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,9 +10,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class UserLoginRequest {
 
-    @NotBlank
-    private String loginId;
+    @NotNull
+    private String userName;
 
-    @NotBlank
-    private String passwordHash;
+    @NotNull
+    private String password;
 }

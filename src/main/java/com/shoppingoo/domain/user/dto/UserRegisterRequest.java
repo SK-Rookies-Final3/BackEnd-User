@@ -1,6 +1,7 @@
 package com.shoppingoo.domain.user.dto;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,9 +11,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class UserRegisterRequest {
 
-    @NotBlank(message = "아이디는 필수 입력 값입니다.")
-    private String loginId;
+    @NotNull
+    private String username;
 
-    @NotBlank(message = "비밀번호는 필수 입력 값입니다.")
-    private String passwordHash;
+    @NotNull
+    private String password;
 }

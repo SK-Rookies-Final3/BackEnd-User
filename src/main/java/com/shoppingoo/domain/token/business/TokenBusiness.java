@@ -14,11 +14,8 @@ import java.util.Optional;
 @RequiredArgsConstructor
 @Business
 public class TokenBusiness {
-
     private final TokenService tokenService;
-
     private final TokenConverter tokenConverter;
-
 
     /**
      * 1. user entity user Id 추출
@@ -33,9 +30,9 @@ public class TokenBusiness {
                     return user.getUsername();
                 })
                 .map(user -> {
-                    String loginId = userEntity.getLoginId();
-                    var accessToken = tokenService.issueAccessToken(loginId);
-                    var refreshToken = tokenService.issueRefreshToken(loginId);
+                    String username = userEntity.getUsername();
+                    var accessToken = tokenService.issueAccessToken(username);
+                    var refreshToken = tokenService.issueRefreshToken(username);
                     return tokenConverter.toResponse(accessToken, refreshToken);
                 })
                 .orElseThrow(
@@ -46,8 +43,8 @@ public class TokenBusiness {
     }
 
     public String validationAccessToken(String accessToken){
-        var loginId = tokenService.validationToken(accessToken);
-        return loginId;
+        var username = tokenService.validationToken(accessToken);
+        return username;
     }
 
 }

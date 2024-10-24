@@ -1,5 +1,6 @@
 package com.shoppingoo.domain.user.dto;
 
+import com.shoppingoo.db.user.enums.UserRole;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,16 +17,16 @@ import java.time.LocalDateTime;
 public class UserDto {
 
     private int id;
-
-    private String loginId;
-
     private String username;
-
-    private String passwordHash;
-
-    private LocalDateTime createdAt;
-
-    private LocalDateTime lastLogin;
-
-    private Boolean isActive;
+    private String password;
+    private String nickname;
+    private String adress;
+    private int age;
+    private String gender;
+    private int height;
+    private int weight;
+    private String email;
+    private UserRole role;
+    private LocalDateTime createdat;
+    private LocalDateTime lastAccpetedat;
 }

@@ -769,3 +769,51 @@ Caused by: java.io.FileNotFoundException: class path resource [keystore.p12] can
 	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:215)
 	at org.springframework.boot.ssl.jks.JksSslStoreBundle.loadKeyStore(JksSslStoreBundle.java:120)
 	... 24 common frames omitted
+2024-10-24 09:06:29,971  INFO {com.shoppingoo.ShoppingooApplication} Starting ShoppingooApplication using Java 21.0.5 with PID 13384 (C:\Users\t0105\Downloads\shoppingoo\build\classes\java\main started by t0105 in C:\Users\t0105\Downloads\shoppingoo)
+2024-10-24 09:06:29,974 DEBUG {com.shoppingoo.ShoppingooApplication} Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-24 09:06:29,975  INFO {com.shoppingoo.ShoppingooApplication} The following 1 profile is active: "prod"
+2024-10-24 09:06:30,060  INFO {org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor} Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-24 09:06:30,061  INFO {org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor} For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-24 09:06:32,284  INFO {org.springframework.data.repository.config.RepositoryConfigurationDelegate} Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-24 09:06:32,767  INFO {org.springframework.data.repository.config.RepositoryConfigurationDelegate} Finished Spring Data repository scanning in 466 ms. Found 1 JPA repository interface.
+2024-10-24 09:06:34,575  WARN {org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext} Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2024-10-24 09:06:34,589  INFO {org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger} 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-10-24 09:06:34,639 ERROR {org.springframework.boot.SpringApplication} Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:619)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.shoppingoo.ShoppingooApplication.main(ShoppingooApplication.java:9)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.IllegalStateException: Unable to create key store: Could not load store from 'classpath:keystore.p12'
+	at org.springframework.boot.ssl.jks.JksSslStoreBundle.createKeyStore(JksSslStoreBundle.java:96)
+	at org.springframework.boot.ssl.jks.JksSslStoreBundle.lambda$new$0(JksSslStoreBundle.java:59)
+	at org.springframework.util.function.SingletonSupplier.get(SingletonSupplier.java:106)
+	at org.springframework.boot.ssl.jks.JksSslStoreBundle.getKeyStore(JksSslStoreBundle.java:65)
+	at org.springframework.boot.web.server.WebServerSslBundle.createKeyStore(WebServerSslBundle.java:157)
+	at org.springframework.boot.web.server.WebServerSslBundle.createStoreBundle(WebServerSslBundle.java:147)
+	at org.springframework.boot.web.server.WebServerSslBundle.get(WebServerSslBundle.java:142)
+	at org.springframework.boot.web.server.AbstractConfigurableWebServerFactory.getSslBundle(AbstractConfigurableWebServerFactory.java:198)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.customizeSsl(TomcatServletWebServerFactory.java:383)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.customizeConnector(TomcatServletWebServerFactory.java:359)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:212)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:188)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	... 11 common frames omitted
+Caused by: java.lang.IllegalStateException: Could not load store from 'classpath:keystore.p12'
+	at org.springframework.boot.ssl.jks.JksSslStoreBundle.loadKeyStore(JksSslStoreBundle.java:125)
+	at org.springframework.boot.ssl.jks.JksSslStoreBundle.createKeyStore(JksSslStoreBundle.java:91)
+	... 23 common frames omitted
+Caused by: java.io.FileNotFoundException: class path resource [keystore.p12] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:215)
+	at org.springframework.boot.ssl.jks.JksSslStoreBundle.loadKeyStore(JksSslStoreBundle.java:120)
+	... 24 common frames omitted

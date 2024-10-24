@@ -45,20 +45,9 @@ public class AuthorizationInterceptor implements HandlerInterceptor {
             throw new ApiException(TokenErrorCode.AUTHORIZATION_TOKEN_NOT_FOUND);
         }
 
-        var loginId = tokenBusiness.validationAccessToken(accessToken);
+        var userName = tokenBusiness.validationAccessToken(accessToken);
 
-        if (loginId != null) {
-            var userOptional = userRepository.findByLoginId(loginId); // loginId로 사용자 조회
 
-            if (userOptional.isPresent()) {
-                var username = userOptional.get().getUsername(); // username 가져오기
-                var requestContext = Objects.requireNonNull(RequestContextHolder.getRequestAttributes());
-                requestContext.setAttribute("username", username, RequestAttributes.SCOPE_REQUEST); // username 저장
-                return true;
-            } else {
-                throw new ApiException(ErrorCode.BAD_REQUEST, "사용자를 찾을 수 없습니다.");
-            }
-        }
 
         throw new ApiException(ErrorCode.BAD_REQUEST, "인증실패");
     }

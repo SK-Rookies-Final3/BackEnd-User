@@ -1,12 +1,14 @@
 package com.shoppingoo.common.entity;
+
+
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.persistence.MappedSuperclass;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
-import org.springframework.data.annotation.Id;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -15,15 +17,7 @@ import org.springframework.data.annotation.Id;
 @SuperBuilder
 public class BaseEntity {
     //식별키
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-
-    // Getters and Setters
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 }

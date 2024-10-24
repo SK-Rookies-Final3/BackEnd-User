@@ -2,13 +2,14 @@ package com.shoppingoo.domain.user.dto;
 import com.shoppingoo.common.error.ErrorCode;
 import com.shoppingoo.common.exception.ApiException;
 import com.shoppingoo.db.user.User;
-import jakarta.persistence.Converter;
+import com.shoppingoo.common.annotation.Converter;
+
 import lombok.RequiredArgsConstructor;
 
 import java.util.Optional;
 
 @RequiredArgsConstructor
-//@Converter
+@Converter
 public class UserMapper {
 
     public User toEntity(UserRegisterRequest request){
@@ -20,8 +21,8 @@ public class UserMapper {
 
         // 엔티티로 변환
         return User.builder()
-                .loginId(request.getLoginId())
-                .passwordHash(request.getPasswordHash())
+                .username(request.getUsername())
+                .password(request.getPassword())
                 .build();
     }
 
@@ -30,12 +31,18 @@ public class UserMapper {
         return Optional.ofNullable(user)
                 .map(it -> UserResponse.builder()
                         .id(user.getId())
-                        .loginId(user.getLoginId())
                         .username(user.getUsername())
-                        .passwordHash(user.getPasswordHash())
+                        .password(user.getPassword())
+                        .nickname(user.getNickname())
+                        .adress(user.getAddress())
+                        .age(user.getAge())
+                        .gender(user.getGender())
+                        .height(user.getHeight())
+                        .weight(user.getWeight())
+                        .email(user.getEmail())
+                        .role(user.getRole())
                         .createdAt(user.getCreatedAt())
-                        .lastLogin(user.getLastLogin())
-                        .isActive(user.getIsActive())
+                        .lastAccpetedAt(user.getLastAccpetedAt())
                         .build())
                 .orElseThrow(() -> new ApiException(ErrorCode.NULL_POINT, "UserEntity Null"));
     }

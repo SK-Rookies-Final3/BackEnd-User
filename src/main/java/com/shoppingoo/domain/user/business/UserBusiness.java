@@ -9,6 +9,8 @@ import com.shoppingoo.domain.user.dto.UserResponse;
 import com.shoppingoo.domain.user.service.UserService;
 import lombok.RequiredArgsConstructor;
 
+import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
+
 @RequiredArgsConstructor
 @Business
 public class UserBusiness {
@@ -18,18 +20,7 @@ public class UserBusiness {
     private final UserMapper userMapper;
     private final TokenBusiness tokenBusiness;
 
-    // 로그인 ID를 사용하여 사용자 정보를 조회하고, DTO로 변환합니다.
-    public UserResponse info(String loginId) {
-        var userEntity = userService.getUserWithThrow(loginId);
-        return userMapper.toResponse(userEntity);
-    }
-
-    // 로그인 ID를 사용하여 username을 반환합니다.
-    public String getUsernameByLoginId(String loginId) {
-        return userService.findUsernameByLoginId(loginId);
-    }
-
-    /**
+    /*
      * 1. 회원가입(request) -> entity
      * 2. entity -> 데이터베이스에 저장
      * 3. 저장된 엔티티 -> response
@@ -54,12 +45,4 @@ public class UserBusiness {
         return tokenResponse;
     }
 
-    // 로그인 후 세션에 저장된 회원의 userId를 이용하여 response(닉네임, 가입날짜 등) 정보를 받고자 하는 메소드
-    public UserResponse info(
-            User user
-    ) {
-        var userEntity = userService.getUserWithThrow(user.getLoginId());
-        var response = userMapper.toResponse(userEntity);
-        return response;
-    }
 }
